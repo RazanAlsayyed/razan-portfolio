@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Razan Alsayyed | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#0bb3a6;
+  --dark:#0e3b3b;
+  --light:#f7fdfd;
+  --bg:#eef2f3; /* رمادي فاتح */
+}
+
+*{
+  box-sizing:border-box;
+  font-family:'Cairo',sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:#333;
+}
+
+/* ===== Sidebar ===== */
+.sidebar{
+  position:fixed;
+  right: ;:30px;
+  top:50%;
+  transform:translateY(-50%);
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  overflow:hidden;
+  z-index:100;
+}
+
+.sidebar a{
+  display:flex;
+  justify-content:center;
+  padding:18px;
+  text-decoration:none;
+  color:#0e3b3b;
+  font-size:14px;
+  border-bottom:1px solid #eee;
+  transition:.3s;
+}
+
+.sidebar a:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* ===== Main Card ===== */
+.container{
+  max-width:1100px;
+  margin:80px auto;
+  background:#fff;
+  border-radius:28px;
+  box-shadow:0 40px 80px rgba(0,0,0,.25);
+  overflow:hidden;
+}
+
+/* ===== Hero ===== */
+.hero{
+  background:linear-gradient(135deg,#0bb3a6,#0e3b3b);
+  color:#fff;
+  padding:90px 60px;
+}
+
+.hero-box{
+  max-width:720px;
+  margin:auto;
+  text-align:center;
+}
+
+.hero-avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid rgba(255,255,255,.8);
+  margin-bottom:25px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:44px;
+}
+
+.hero span{
+  display:block;
+  margin-top:10px;
+  color:#c7fff7;
+  font-size:18px;
+}
+
+.hero p{
+  margin:25px auto;
+  line-height:1.9;
+  max-width:600px;
+}
+
+.cv-btn{
+  display:inline-block;
+  padding:14px 36px;
+  border-radius:999px;
+  background:#2fcfc4;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.cv-btn:hover{
+  background:#1aa39a;
+}
+
+/* ===== Sections ===== */
+.section{
+  padding:70px 60px;
+}
+
+.section h2{
+  margin-bottom:30px;
+  font-size:30px;
+  color:#0e3b3b;
+}
+
+/* ===== Services ===== */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:var(--light);
+  border-radius:20px;
+  padding:30px;
+  box-shadow:0 15px 30px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+/* ===== Certificates ===== */
+.certificates{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
+}
+
+.cert{
+  background:#fff;
+  border-radius:22px;
+  padding:30px 22px;
+  text-align:center;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  position:relative;
+}
+
+.cert::before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,#0f766e,#38b2ac);
+}
+
+.cert h4{
+  font-size:15px;
+  margin-bottom:22px;
+}
+
+.cert a{
+  display:inline-block;
+  padding:11px 26px;
+  border-radius:999px;
+  background:#0f766e;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* ===== Footer ===== */
+.footer{
+  text-align:center;
+  padding:30px;
+  background:#f0fafa;
+  color:#555;
+}
+
+/* ===== Mobile ===== */
+@media (max-width:768px){
+  .sidebar{display:none;}
+  .container{margin:30px 15px;}
+  .section{padding:45px 20px;}
+  .hero{padding:65px 20px;}
+  .hero h1{font-size:30px;}
+  .hero-avatar{width:90px;height:90px;}
+  .services,.certificates{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <a href="#about">عني</a>
+  <a href="#services">أعمالي</a>
+  <a href="#pro-certs">الرخص المهنية</a>
+  <a href="#certs">الشهادات</a>
+  <a href="#contact">اتصل بي</a>
+</div>
+
+<div class="container">
+
+<section class="hero" id="about">
+  <div class="hero-box">
+    <img src="images/profile.png" class="hero-avatar">
+    <h1>Razan Abdulrahman Alsayyed</h1>
+    <span>Computer Science Specialist</span>
+    <p>
+      خريجة علوم الحاسب الآلي، أمتلك مهارات قوية في تطوير الويب، تحليل البيانات،
+      وإعداد المحتوى التدريبي بأسلوب احترافي ومنظم.
+    </p>
+    <a href="files/Razan_Alsayyed_CV.pdf" class="cv-btn" download>
+      تحميل السيرة الذاتية (CV)
+    </a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2>أعمالي</h2>
+  <div class="services">
+    <div class="card">تصميم مواقع ويب</div>
+    <div class="card">تحليل بيانات</div>
+    <div class="card">UI / UX</div>
+    <div class="card">معلمة حاسب آلي</div>
+    <div class="card">دعم تقني</div>
+    <div class="card">خدمة عملاء</div>
+  </div>
+</section>
+
+<section class="section" id="pro-certs">
+  <h2>الرخص المهنية والإحترافية</h2>
+  <div class="certificates">
+    <div class="cert">
+      <h4>رخصة المعلم</h4>
+      <a href="certificates/Teacher_License.pdf" target="_blank">عرض</a>
+    </div>
+    <div class="cert">
+      <h4>PMP</h4>
+      <a href="certificates/PMP_Certificate.pdf" target="_blank">عرض</a>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section class="section" id="certs">
+    <h2>الشهادات والدورات</h2>
+  
+    <div class="certificates">
+  
+      <div class="cert"><h4>Analysis and Technical Entrepreneurship</h4><a href="certificates/Analysis and technical entrepreneurship.jpg" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Analysis of Client Needs in Graphic Design</h4><a href="certificates/Analysis of client needs in graphic design.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Big Data</h4><a href="certificates/Big Data.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Blockchain</h4><a href="certificates/Blockchain.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Classroom Environment Management</h4><a href="certificates/Classroom Environment Management.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Cloud Computing Security</h4><a href="certificates/Cloud Computing Security.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Cloud Computing</h4><a href="certificates/Cloud computing.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Computer Fundamentals</h4><a href="certificates/Computer Fundamentals.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Computer Hardware Basics</h4><a href="certificates/ComputerHardwareBasicsUpdate20260114-29-btoj9o.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Customer Needs Analysis in Graphic Design</h4><a href="certificates/Customer Needs Analysis in Graphic Design.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Cyber Security</h4><a href="certificates/Cyber Security.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Excel Spreadsheet Program</h4><a href="certificates/Excel spreadsheet program.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Graphical Analysis Skills Using Excel</h4><a href="certificates/Graphical analysis skills using Excel.jpg" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Information Life Cycle</h4><a href="certificates/Information life cycle.jpg" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Information Security</h4><a href="certificates/Information Security.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Internet of Things and its Applications</h4><a href="certificates/Internet of Things and its applications.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Introduction to Cisco Cyber Security</h4><a href="certificates/Introduction to Cisco Cyber Security.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Introduction to Data Science</h4><a href="certificates/Introduction to Data Science.jpg" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Introduction to Fiber Optic Cables</h4><a href="certificates/Introduction to Fiber Optic Cables.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Introduction to Graphic Design</h4><a href="certificates/Introduction to Graphic Design.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Learn About the Basics of the Computer</h4><a href="certificates/Learn about the basics of the computer.pdf" target="_blank">عرض الشهادة</a></div>
+  
+  
+      <div class="cert"><h4>Machine Learning</h4><a href="certificates/Machine learning.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Microsoft Excel</h4><a href="certificates/Microsoft Excel.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Networking Basics</h4><a href="certificates/NetworkingBasicsUpdate20260114-32-j813np.pdf" target="_blank">عرض الشهادة</a></div>
+  
+      <div class="cert"><h4>Training of Trainers - TOT</h4><a href="certificates/TOT.pdf" target="_blank">عرض الشهادة</a></div>
+
+
+      <!-- شهادات إضافية -->
+<div class="cert">
+    <h4>Excel Camp</h4>
+    <a href="certificates/Excel camp.pdf" target="_blank">عرض الشهادة</a>
+  </div>
+  
+  <div class="cert">
+    <h4>Occupational Safety and Health</h4>
+    <a href="certificates/Occupational Safety and Health.pdf" target="_blank">عرض الشهادة</a>
+  </div>
+  
+  <div class="cert">
+    <h4>Outlook</h4>
+    <a href="certificates/Outlook.pdf" target="_blank">عرض الشهادة</a>
+  </div>
+  
+  <div class="cert">
+    <h4>Predictive Analysis</h4>
+    <a href="certificates/Predictive Analysis.pdf" target="_blank">عرض الشهادة</a>
+  </div>
+  
+  <div class="cert">
+    <h4>Techniques of Digitizing Archival Documents</h4>
+    <a href="certificates/Techniques of digitizing archival documents.pdf" target="_blank">عرض الشهادة</a>
+  </div>
+  
+  <div class="cert">
+    <h4>User Experience Design</h4>
+    <a href="certificates/User Experience Design.pdf" target="_blank">عرض الشهادة</a>
+  </div>
+  
+  <div class="cert">
+    <h4>Web Application Development</h4>
+    <a href="certificates/Web Application Development.pdf" target="_blank">عرض الشهادة</a>
+  </div>
+  
+  
+  </section>
+
+<section class="section" id="contact">
+  <h2>التواصل</h2>
+  <p>📧 RazanAlsayyed@outlook.sa</p>
+  <p>📱 <a href="https://wa.me/9665049299237">9665049299237</a></p>
+</section>
+
+<div class="footer">
+  © 2025 Razan Alsayyed
+</div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
